@@ -20,4 +20,23 @@ public class EmployeeServices {
 		return employeeDao.getAllEmps();
 	}
 	
+	@Transactional
+	public int registerEmployee(Employee emp) {
+		return	this.employeeDao.saveEmployee(emp);
+	}
+	
+	@Transactional
+	public void updateEmployee(Employee emp) {
+		this.employeeDao.updateEmployee(emp);
+	}
+	
+	
+	@Transactional
+	public int deleteEmployee(int id) {
+		return this.employeeDao.deleteEmployee(id);
+	}
+	
+	
+	
+	
 }
